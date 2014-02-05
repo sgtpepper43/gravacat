@@ -1,0 +1,45 @@
+@import "bootstrap";
+
+@mixin centered {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+$footer-height: 40px;
+
+html, body {
+  height: 100%;
+}
+
+.content {
+  max-width:900px;
+  padding:20px;
+  @include centered;
+  min-height: 100%;
+  height: auto !important;
+  margin-bottom: -$footer-height;
+}
+.right {
+  text-align:right;
+}
+
+.content:after {
+  content: "";
+  display: block;
+}
+.images {
+  img {
+    width:64px;
+    height:auto;
+  }
+}
+footer, .content:after {
+  height: $footer-height;
+}
+
+footer {
+  background-color:$gray-dark;
+  color:white;
+  text-align:center;
+  line-height: $footer-height;
+}
