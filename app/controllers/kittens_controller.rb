@@ -5,4 +5,7 @@ class KittensController < ApplicationController
     kitteh = (params[:id].hash.abs % num_images) + 1
     send_file Rails.root.join('app', 'assets', 'images', "#{kitteh}.png"), :type => 'image/png', :disposition => 'inline', :x_sendfile=>true
   end
+  def meow
+    send_data "Meow meow meow meow meow meow meow", :type => 'text/text/'
+  end
 end
