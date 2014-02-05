@@ -1,5 +1,6 @@
 Gravacat::Application.routes.draw do
 
+  root  'static_pages#home'
   match '/:id', to: 'kittens#kittens', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
