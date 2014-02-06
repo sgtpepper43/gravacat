@@ -6,6 +6,6 @@ class KittensController < ApplicationController
     send_file Rails.root.join('app', 'assets', 'images', "#{kitteh}.png"), :type => 'image/png', :disposition => 'inline', :x_sendfile=>true
   end
   def meow
-    send_data "meow meow meow meow meow meow meow", :type => 'text/text; charset=utf-8'
+    send_data "meow meow meow meow meow meow meow", :type => 'text/text; charset=utf-8' :disposition => 'inline'
   end
 end
